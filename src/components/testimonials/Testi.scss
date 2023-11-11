@@ -1,0 +1,121 @@
+.testi {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+
+  .l-testi {
+    display: flex;
+    flex: 1 1;
+    gap: 2rem;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    > :nth-child(1) {
+      color: var(--orange);
+      font-weight: bold;
+    }
+
+    > :nth-child(2),
+    > :nth-child(3) {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    > :nth-child(4) {
+      text-transform: none;
+      text-align: justify;
+      line-height: 40px;
+      letter-spacing: 2px;
+    }
+
+    .child-5 > :nth-child(1) {
+      color: var(--orange);
+    }
+  }
+
+  .r-testi {
+    // display: flex;
+    flex: 1;
+    position: relative;
+
+    > :nth-child(1) {
+      position: absolute;
+      width: 17rem;
+      height: 20rem;
+      border: 2px solid orange;
+      background-color: transparent;
+      right: 9rem;
+      top: 0.9rem;
+    }
+    > :nth-child(2) {
+      position: absolute;
+      width: 17rem;
+      height: 19rem;
+      background: var(--planCard);
+      right: 7rem;
+      top: 4rem;
+    }
+
+    > img {
+      position: absolute;
+      width: 17rem;
+      height: 20rem;
+      object-fit: cover;
+      right: 8rem;
+      top: 2rem;
+    }
+    .arrows {
+      display: flex;
+      gap: 0.5rem;
+      position: absolute;
+      bottom: 1rem;
+      left: 3rem;
+
+      img {
+        width: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testi {
+    flex-direction: column;
+
+    .l-testi {
+      > :nth-child(2),
+      > :nth-child(3) {
+        font-size: x-large !important;
+      }
+    }
+    .r-testi {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 2rem !important;
+
+      > :nth-child(1) {
+        right: -0.9rem;
+        top: -0.7rem;
+      }
+      > :nth-child(2) {
+        top: 1.8rem;
+        right: -1.8rem;
+      }
+
+      > img {
+        top: 0;
+        right: 0;
+        position: relative;
+        align-self: center;
+      }
+      :last-child {
+        display: flex !important;
+        bottom: -5rem !important;
+        left: 5rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,251 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+.blur-home {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+}
+.left-s {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.best-ad {
+  margin-top: 4rem;
+  background-color: #363d42;
+  border-radius: 4rem;
+  width: fit-content;
+  padding: 20px 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > span {
+    z-index: 2;
+  }
+  > div {
+    position: absolute;
+    background-color: var(--orange);
+    width: 5.4rem;
+    height: 80%;
+    left: 8px;
+    border-radius: 3rem;
+    z-index: 1;
+  }
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-overflow: inherit;
+  > div:nth-of-type(3) {
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+  }
+}
+
+.fig {
+  display: flex;
+  gap: 2rem;
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+  > div > span:nth-of-type(1) {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  > div > span:nth-of-type(2) {
+    color: var(--gray);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.home-btns {
+  display: flex;
+  gap: 1rem;
+  font-weight: normal;
+  > :nth-child(1) {
+    color: #ffffff;
+    background-color: var(--orange);
+    width: 8rem;
+  }
+  > :nth-child(2) {
+    color: #ffffff;
+    background-color: transparent;
+    width: 8rem;
+    border: 2px solid var(--orange);
+  }
+}
+
+.right-s {
+  flex: 1;
+  position: relative;
+  background-color: var(--orange);
+  > .btn {
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    color: #000300;
+  }
+}
+
+.heart-rate {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--darkGray) !important;
+  width: fit-content;
+  padding: 1rem;
+  align-items: start;
+  border-radius: 5px;
+  position: absolute;
+  right: 4rem;
+  top: 7rem;
+  > img {
+    width: 2rem;
+  }
+  > :nth-child(2) {
+    color: var(--gray);
+    font-size: 1rem;
+  }
+  > :nth-child(3) {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+}
+
+.h-img {
+  position: absolute;
+  top: 10rem;
+  right: 8rem;
+  width: 23rem;
+}
+
+.h-img-back {
+  position: absolute;
+  top: 4rem;
+  right: 20rem;
+  z-index: -1;
+  width: 15rem;
+}
+
+.calories {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--caloryCard);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 12.6rem;
+  position: absolute;
+  top: 32rem;
+  right: 28rem;
+  > img {
+    width: 3rem;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > :nth-child(1) {
+      color: var(--gray);
+    }
+    > :nth-child(2) {
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+  .blur-home {
+    width: 14rem;
+  }
+  .best-ad {
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+    width: 16rem;
+  }
+
+  .home-text {
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+
+    > div:nth-child(3) {
+      font-size: small;
+      font-weight: 200;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  .home-btns {
+    justify-content: center;
+  }
+  .fig {
+    > div > span:nth-child(1){
+      font-size: large;
+    }
+    > div > span:nth-child(2){
+      font-size: small;
+    }
+  }
+
+  .right-s {
+    position: relative;
+    background: none;
+
+    .heart-rate{
+      left: 1rem;
+      top: 2rem;
+    }
+
+    .calories{
+      position: relative;
+      top: 5rem;
+      left: 2rem;
+
+      > img{
+        width: 2rem;
+      }
+      >div> :nth-child(2){
+        color: #ffffff;
+        font-size: 1rem;
+      }
+    }
+    .h-img {
+      position: relative;
+      width: 15rem;
+      left: 7rem;
+      top: 4rem;
+      align-self: center;
+    }
+    .h-img-back {
+      width: 15rem;
+      left: 2rem;
+      top: 0;
+  }
+}
+}
